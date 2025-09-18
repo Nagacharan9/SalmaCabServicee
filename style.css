@@ -1,0 +1,43 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+header {
+  background-image: url('https://images.unsplash.com/photo-1549921296-3a7e4d37c5b3');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  font-size: 0.95rem;
+}
