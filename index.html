@@ -98,6 +98,42 @@
   </form>
   <div id="bookingMessage" style="margin-top: 20px; color: green;"></div>
 </section>
+    <script>
+  // Paste the JS code here from my last message
+      // Toggle between Home and Book a Cab pages
+document.querySelector('nav a[href="#book-cab"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.querySelector('section').style.display = 'none'; // hide homepage section
+  document.getElementById('book-cab').style.display = 'block'; // show booking form
+});
+
+// Optionally add event for home link to show homepage again
+document.querySelector('nav a[href="#home"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('book-cab').style.display = 'none';
+  document.querySelector('section').style.display = 'block';
+});
+
+// Handle booking form submission
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const pickup = this.pickup.value;
+  const drop = this.drop.value;
+  const date = this.date.value;
+  const time = this.time.value;
+  const cabType = this.cabType.value;
+
+  // For now, just show a confirmation message
+  document.getElementById('bookingMessage').textContent = 
+    Booking confirmed! Pickup from pickup to{drop} on date at{time} (${cabType}).;
+
+  // Reset form
+      this.reset();
+});
+
+</script>
+</body>
+
 
   </section>
 
